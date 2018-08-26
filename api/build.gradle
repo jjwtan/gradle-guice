@@ -1,0 +1,12 @@
+buildscript {
+    ext {
+        jettyVersion = '9.3.14.v20161028'
+        servletApiVersion = '3.1.0'
+    }
+}
+
+dependencies {
+    compile project(':common')
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version:"${jettyVersion}"
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:"${servletApiVersion}"
+}

@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        // dependency versions
+        guiceVersion = '4.1.0'
+        resteasyVersion = '3.0.19.Final'
+        swaggerVersion = '1.5.10'
+        slf4jVersion = '1.7.21'
+        logbackVersion = '1.1.8'
+    }
+}
+
+dependencies {
+    // guice
+    compile group: 'com.google.inject', name: 'guice', version: "${guiceVersion}"
+    compile group: 'com.google.inject.extensions', name: 'guice-servlet', version: "${guiceVersion}"
+    compile group: 'com.google.inject.extensions', name: 'guice-multibindings', version: "${guiceVersion}"
+
+    // RESTeasy
+    compile group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: "${resteasyVersion}"
+    compile group: 'org.jboss.resteasy', name: 'resteasy-servlet-initializer', version: "${resteasyVersion}"
+    compile group: 'org.jboss.resteasy', name: 'resteasy-guice', version: "${resteasyVersion}"
+
+    // swagger
+    compile group: 'io.swagger', name: 'swagger-jaxrs', version: "${swaggerVersion}"
+
+    // logging
+    compile group: 'org.slf4j', name: 'slf4j-api', version: "${slf4jVersion}"
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: "${logbackVersion}"
+}
